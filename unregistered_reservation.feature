@@ -31,7 +31,8 @@ Feature: Unregistered user appointment reservation
         | Phone Number |
 
   Scenario: Progressing to Appointment Confirmation page
-    Given First Name, Last Name, Email and Phone Number text fields are filled with valid values
+    Given the user is on Customer Information page
+    And First Name, Last Name, Email and Phone Number text fields are filled with valid values
     When "Next" button is pressed
     Then the user is on Appointment Confirmation page
 
